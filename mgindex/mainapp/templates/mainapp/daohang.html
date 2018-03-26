@@ -1,0 +1,711 @@
+{% extends 'mainapp/index.html' %}
+{% block page-content %}
+
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">常用信息导航</h1>
+            <ul class="nav nav-tabs row-margin-bottom">
+                <li class="active"><a href="#gldz" data-toggle="tab" aria-expanded="true">管理地址</a>
+                </li>
+                <li class=""><a href="#web1" data-toggle="tab" aria-expanded="false">外部网站</a>
+                </li>
+                <li class=""><a href="#lxr" data-toggle="tab" aria-expanded="false">常用联系人</a>
+                </li>
+                <li class=""><a href="#renwu" data-toggle="tab" aria-expanded="false">工作计划</a>
+                </li>
+                <li class=""><a href="#renwu" data-toggle="tab" aria-expanded="false">我的任务</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.col-lg-12 -->
+
+    </div>
+    <!-- /.row -->
+    <div class="tab-content">
+        <div class="tab-pane fade active in" id="gldz">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-bug fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">Nessus漏洞扫描</div>
+                                    <div>https://10.8.5.205/</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://10.8.5.205:8834" target="_blank">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa  fa-key fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">密码管理系统</div>
+                                    <div>https://10.8.5.90/</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://10.8.5.90" target="_blank">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa  fa-shield fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">中原云堡垒机</div>
+                                    <div>https://222.143.21.25:9943/</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://222.143.21.25:9943/" target="_blank">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa  fa-bar-chart-o fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">锐捷监控系统</div>
+                                    <div>http://10.8.1.146/</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="http://10.8.1.146/" target="_blank">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-umbrella fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">360防病毒服务器</div>
+                                    <div>https://10.8.5.202:8800</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://10.8.5.202:8800">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-eye fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">OSSEC入侵检测系统</div>
+                                    <div>http://10.8.5.104/ossec</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="http://10.8.5.104/ossec" target="_blank">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-history fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">ELK日志系统</div>
+                                    <div>http://10.8.5.202:5601</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="http://10.8.5.202:5601">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-gears fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">ELK日志后台</div>
+                                    <div>http://10.8.5.202:9100/</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="http://10.8.5.202:9100/" target="_blank">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-bug fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">等保云漏洞扫描</div>
+                                    <div>http://scaner.anbai.com</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="http://scaner.anbai.com" target="_blank">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-shield fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">等保云堡垒机</div>
+                                    <div>https://111.7.165.186:9443</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://111.7.165.186:9443/" target="_blank">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-star fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">Zabbix</div>
+                                    <div>https://10.8.5.104:902/zabbix</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="http://10.8.5.104:902/zabbix" target="_blank">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-star fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">机房资产管理5.3</div>
+                                    <div>http://10.8.5.3/</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="http://10.8.5.3/" target="_blank">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="web1">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-bug fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">{{projectTotal.assets}}</div>
+                                    <div>Nessus漏洞扫描</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/assets_list">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa  fa-key fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">{{projectTotal.assets}}</div>
+                                    <div>密码管理系统</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/assets_list">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa  fa-shield fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">{{projectTotal.assets}}</div>
+                                    <div>中原云堡垒机</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/assets_list">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa  fa-umbrella fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">{{projectTotal.assets}}</div>
+                                    <div>360防病毒服务器</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/assets_list">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-bug fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">{{projectTotal.assets}}</div>
+                                    <div>Nessus漏洞扫描</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/assets_list">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa  fa-key fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">{{projectTotal.assets}}</div>
+                                    <div>密码管理系统</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/assets_list">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa  fa-shield fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">{{projectTotal.assets}}</div>
+                                    <div>中原云堡垒机</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/assets_list">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa  fa-umbrella fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">{{projectTotal.assets}}</div>
+                                    <div>360防病毒服务器</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/assets_list">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-file-text fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">{{projectTotal.cron}}</div>
+                                    <div>ELK日志系统</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/cron_list/1/">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-cogs fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">{{projectTotal.cron}}</div>
+                                    <div>ELK后台</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/cron_list/1/">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-lock fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">{{projectTotal.cron}}</div>
+                                    <div>锐捷监控系统</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/cron_list/1/">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-lock fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="small">{{projectTotal.cron}}</div>
+                                    <div>机房资产管理5.3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/cron_list/1/">
+                            <div class="panel-footer">
+                                <span class="pull-left">打开</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="renwu">
+            test
+        </div>
+        <div class="tab-pane fade" id="lxr">
+            test
+        </div>
+    </div>
+    <!--?<div class="text-center">-->
+        <!--?<h5 style="margin-bottom: 1px solid #eee;"> Copyright © 2017 Net and 金盾工商运维组 . Powered by Django and Bootstrap .</h5>-->
+    <!--?</div>-->
+</div>
+<!-- /#page-wrapper -->
+</div>
+<!-- /#wrapper -->
+<script type="text/javascript">
+	var myChart = echarts.init(document.getElementById('morris-area-chart'));
+	option = {
+		    title : {
+		        text: '最近7天更新统计',
+		        subtext: '更新统计'
+		    },
+		    tooltip : {
+		        trigger: 'axis'
+		    },
+		    legend: {
+		        data:[
+		              {% for ds in userList %}
+		              		'{{ds}}',
+		              {% endfor %}
+		              ]
+		    },
+		    toolbox: {
+		        show : true,
+		        feature : {
+		            mark : {show: true},
+		            dataView : {show: true, readOnly: false},
+		            magicType : {show: true, type: ['line', 'bar']},
+		            restore : {show: true},
+		            saveAsImage : {show: true}
+		        }
+		    },
+		    calculable : true,
+		    xAxis : [
+		        {
+		            type : 'category',
+		            data : [
+		                    {% for ds in dateList %}
+		                    	'{{ds}}',
+		                    {% endfor %}
+		                    ]
+		        }
+		    ],
+		    yAxis : [
+		        {
+		            type : 'value'
+		        }
+		    ],
+		    series : [
+		              {% for ds in orderList %}
+		              	{% for k,v in ds.items %}
+				  	        {
+					            name:'{{k}}',
+					            type:'bar',
+					            data:[
+					                  {% for ds in v %}
+					                  	{{ds}},
+					                  {% endfor %}
+					                  ],
+					            markPoint : {
+					                data : [
+					                    {type : 'max', name: '最大值'},
+					                    {type : 'min', name: '最小值'}
+					                ]
+					            },
+					            markLine : {
+					                data : [
+					                    {type : 'average', name: '平均值'}
+					                ]
+					            }
+					        },
+				        {% endfor %}
+		              {% endfor %}
+		    ]
+		};
+	myChart.setOption(option);
+
+	$(function() {
+
+
+	    Morris.Donut({
+	        element: 'morris-donut-chart',
+	        data: [{
+	            label: "项目",
+	            value: {{projectTotal.project}}
+	        }, {
+	            label: "任务",
+	            value: {{projectTotal.cron}}
+	        },{
+	            label: "剧本",
+	            value: {{projectTotal.playbook}}
+	        },{
+	            label: "资产",
+	            value: {{projectTotal.assets}}
+	        }],
+	        resize: true
+	    });
+
+	    Morris.Bar({
+	        element: 'morris-bar-chart',
+	        data: [
+	               {% for ds in monthDataList %}
+	               		{
+		               		{% for k,v in ds.items %}
+								{% if k == 'date' %}
+									{{k}}:'{{v}}',
+								{% else %}
+									{{k}}:{{v}},
+		                    	{% endif %}
+		               		{% endfor %}
+	               		},
+	               {% endfor %}
+			],
+	        xkey: 'date',
+	        ykeys: [
+	                {% for ds in userList %}
+	                	'{{ds}}',
+	                {% endfor %}
+	                ],
+	        labels: [
+	                 {% for ds in userList %}
+	             		'{{ds}}',
+	             	{% endfor %}
+	             	],
+	        hideHover: 'auto',
+	        resize: true
+	    });
+
+	});
+
+</script>
+{% endblock %}
