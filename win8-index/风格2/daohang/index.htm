@@ -1,0 +1,260 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>金盾安全运维导航（工商局项目）</title>
+<meta name="keywords" content="安全运维导航-河南省工商行政管理局" />
+<meta name="description" content="安全运维导航-河南省工商行政管理局" />
+<link rel="stylesheet" href="css/metro.css">
+<script type="text/javascript" src="script/jquery-1.4.4.min.js"></script>
+<!--解决在ie6下png透明-->
+<!--[if IE 6]>
+	<script type="text/javascript" src="script/DD_belatedPNG.js" ></script>	
+	<script type="text/javascript">
+	DD_belatedPNG.fix('ul,li,img');
+	</script>
+<![endif]-->
+<script type="text/javascript" src="script/jquery.carousel.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//链接在新窗口打开
+		$(".a_link dd a").attr("target","_blank");
+		$(".a_link ul li>a").hover(function(){
+			var a_href=$(this).attr("href");			
+			$(this).siblings().find("a").attr("href",a_href);
+		});
+		//切屏幕
+		$("#top dl dd a").click(function(){
+			var now_class=$(this).attr("class");	
+			$("#top dl dd a.a_index").attr("class","a_index");
+			$("#top dl dd a.a_mzdw").attr("class","a_mzdw");
+			$("#top dl dd a.a_spyy").attr("class","a_spyy");
+			$("#top dl dd a.a_xwzx").attr("class","a_xwzx");
+			$("#top dl dd a.a_gwtb").attr("class","a_gwtb");
+			$("#top dl dd a.a_yxyl").attr("class","a_yxyl");
+			$("#top dl dd a.a_sygj").attr("class","a_sygj");
+			$("#top dl dd a.a_yszy").attr("class","a_yszy");
+			$(this).attr("class",now_class).addClass(now_class+"_h");			
+			var index=$(this).index();
+			$("#metro_box dd").hide();
+			$("#metro_box dd").eq(index).toggle(100);
+			if(index==1){
+				$("body").attr("class","bg0");	
+			}
+			switch (index){
+				case 0:
+					$("body").attr("class","");						
+					break;
+				case 1:
+					$("body").attr("class","bg0");					
+					break;
+				case 2:
+					$("body").attr("class","bg1");						
+					break;
+				case 3:
+					$("body").attr("class","bg2");					
+					break;
+				case 4:
+					$("body").attr("class","bg3");					
+					break;
+				case 5:
+					$("body").attr("class","bg4");						
+					break;	
+				case 6:
+					$("body").attr("class","bg5");						
+					break;	
+				default :
+					$("body").attr("class","bg6");						
+			}
+			
+			<!--[if IE 6]>$("#metro_box dd").eq(index).show(300);<![endif]-->			
+		});
+	});
+</script>
+</head>
+<body>
+<!--头部导航开始-->
+<div id="top">
+  <dl>
+    <dt><a href="http://www.haaic.gov.cn/" target="_blank">金盾安全运维网址导航（工商局）</a></dt>
+    <dd>
+      <a class="a_index" href="/" target="_self">首页</a>
+      <a class="a_mzdw a_mzdw_h">安全系统</a>
+      <a class="a_spyy">安全咨询</a>
+      <a class="a_xwzx">漏洞情报</a>
+      <a class="a_gwtb">安全博客</a>
+      <a class="a_yxyl">常用工具</a>
+      <a class="a_sygj">外网业务</a>
+      <a class="a_yszy">内网业务</a>
+      <a class="a_more" href="http://10.8.1.123/" target="_blank">更多</a></dd>
+  </dl>
+</div>
+<!--头部导航结束--> 
+<!--logo区开始-->
+<div id="metro_box" class="a_link">
+
+  <dl>
+    <dd style="display:none;"></dd>
+    <dd style="display:bolck;">
+    <!--外网安全-->
+      <ul>
+	<li class="one" id="logo_001"><a href="http://172.24.4.2/">外网防病毒</a><span>外网防病毒系统</span></li>
+        <li id="logo_002"><a href="http://manage.zwfw.zyyun.com.cn/">中原云云管平台</a><span>中原云云管平台</span></li>
+        <li id="logo_003"><a href="http://">外网监控系统</a><span>外网监控系统（无）</span></li>
+        <li class="four" id="logo_004"><a href="http://www.gov110.cn/gov/login/">G01系统</a><span>G01系统</span></li>
+        <li class="one" id="logo_005"><a href="https://222.143.21.25:9943/">中原云堡垒机</a><span>中原云堡垒机</span></li>
+        <li id="logo_006"><a href="http://172.24.4.49:19100/">外网日志监控</a><span>外网日志监控</span></li>
+        <li id="logo_007"><a href="http://172.24.4.49:15601/">外网日志系统</a><span>外网日志系统</span></li>
+        <li class="four" id="logo_008"><a href="http://172.24.4.25/ossec">外网OSSEC入侵检测</a><span>外网OSSEC入侵检测</span></li>
+        <li class="one" id="logo_009"><a href="https://172.24.4.2:8834/" >外网漏洞扫描</a><span>外网漏洞扫描</span></li>
+        <li id="logo_010"><a href="https://">null</a><span>null</span></li>
+        <li id="logo_011"><a href="http://">null</a><span>null</span></li>
+        <li class="four" id="logo_012"><a href="https://">null</a><span>null</span></li>
+        <li class="one" id="logo_013"><a href="http://">null</a><span>null</span></li>
+        <li id="logo_014"><a href="http://">null</a><span>null</span></li>
+        <li id="logo_015"><a href="https://">null</a><span>null</span></li>
+        <li class="four" id="logo_016"><a href="http://">null</a><span>null</span></li>
+     </ul>
+    </dd>
+  
+   <dd style="display:none;">
+   <!--内网安全-->
+      <ul>
+        <li class="one" id="logo_001"><a href="http://10.8.5.104:9000/srcpm/">漏洞管理系统</a><span>漏洞管理系统</span></li>
+        <li id="logo_002"><a href="http://10.8.5.115:8800/">内网防病毒系统</a><span>内网防病毒系统</span></li>
+        <li id="logo_003"><a href="http://10.8.5.101">锐捷监控系统</a><span>锐捷监控系统</span></li>
+        <li class="four" id="logo_004"><a href="https://10.186.40.2:9801/login.htm">政务云爱数备份</a><span>政务云爱数备份</span></li>
+        <li class="one" id="logo_005"><a href="" onclick="window.open('https://10.8.5.110/passwordvault/');return false;" >政务云密码机</a><span>政务云密码机</span></li>
+        <li id="logo_006"><a href="http://10.8.5.103:19100/">内网日志监控</a><span>内网日志监控</span></li>
+        <li id="logo_007"><a href="http://10.8.5.103:15601/">内网日志系统</a><span>内网日志系统</span></li>
+        <li class="four" id="logo_008"><a href="http://10.8.5.104/ossec/">内网OSSEC入侵检测</a><span>内网OSSEC入侵检测</span></li>
+        <li class="one" id="logo_009"><a href="https://10.8.4.155/">上网行为管理</a><span>上网行为管理</span></li>
+        <li id="logo_010"><a href="https://10.8.4.156/">办公入侵防御</a><span>办公入侵防御</span></li>
+        <li id="logo_011"><a href="https://10.8.4.60/">互联网防火墙</a><span>互联网防火墙</span></li>
+        <li class="four" id="logo_016"><a href="https://10.8.5.14/">互联网入侵防御</a><span>互联网入侵防御</span></li>
+        <li class="one" id="logo_013"><a href="https://10.8.5.103:8834/">内网漏洞扫描</a><span>内网漏洞扫描</span></li>
+        <li id="logo_014"><a href="http://">null</a><span>null</span></li>
+        <li id="logo_015"><a href="https://10.8.5.105:8834/"> null</a><span>null</span></li>
+        <li class="four" id="logo_016"><a href="http://"> null</a><span>null</span></li>
+      </ul>
+    </dd>
+    <dd style="display:none;">
+    <!--漏洞情报-->
+      <ul>
+	<li class="one" id="logo_001"><a href="http://www.cnnvd.org.cn/">国家漏洞库</a><span>国家漏洞库</span></li>
+        <li id="logo_002"><a href="http://www.cnvd.org.cn/">CNVD漏洞平台</a><span>CNVD漏洞平台</span></li>
+        <li id="logo_003"><a href="http://www.0daybank.org/">漏洞银行</a><span>漏洞银行</span></li>
+        <li class="four" id="logo_004"><a href="http://www.bugscan.net/">BugScan漏洞</a><span>BugScan漏洞</span></li>
+        <li class="one" id="logo_005"><a href="http://ivd.winicssec.com/">工控行业漏洞库</a><span>工控行业漏洞库</span></li>
+        <li id="logo_006"><a href="https://www.anquanke.com/">安全客</a><span>安全客</span></li>
+        <li id="logo_007"><a href="https://x.threatbook.cn/">微步在线</a><span>微步在线</span></li>
+        <li class="four" id="logo_008"><a href="http://cve.scap.org.cn/">CVE中文漏洞库</a><span>CVE中文漏洞库</span></li>
+        <li class="one" id="logo_009"><a href="http://www.freebuf.com/" >FreeBuf官网</a><span>FreeBuf官网</span></li>
+        <li id="logo_010"><a href="https://www.seebug.org">知道创宇Seebug</a><span>知道创宇Seebug</span></li>
+        <li id="logo_011"><a href="http://www.bugscan.net/source/template/vulns/">BugScan漏洞</a><span>BugScan漏洞</span></li>
+        <li class="four" id="logo_012"><a href="http://0day5.com/">漏洞时代</a><span>漏洞时代</span></li>
+        <li id="logo_013"><a href="http://www.nsfocus.net/index.php?act=sec_bug">绿盟漏洞库</a><span>绿盟漏洞库</span></li>
+        <li id="logo_014"><a href="https://www.cvedetails.com/">CVE Details</a><span>CVE Details</span></li>
+        <li id="logo_015"><a href="http://cve.mitre.org/">CVE漏洞</a><span>CVE漏洞</span></li>
+        <li class="four" id="logo_016"><a href="https://technet.microsoft.com/zh-cn/security/bulletins">Microsof安全公告</a><span>Microsof安全公告</span></li>
+      </ul>
+    </dd>
+    <dd style="display:none;">
+    <!--安全博客-->
+      <ul>
+       	<li class="one" id="logo_001"><a href="https://bowen.navisec.it/">NaviSec安全博文</a><span>NaviSec安全博文</span></li>
+        <li id="logo_002"><a href="http://avfisher.win/">安全小飞侠</a><span>安全小飞侠</span></li>
+        <li id="logo_003"><a href="http://www.lanqibing.com/">蓝骑兵博客</a><span>蓝骑兵博客</span></li>
+        <li class="four" id="logo_004"><a href="https://www.waitalone.cn/">独自等待</a><span>独自等待</span></li>
+        <li class="one" id="logo_005"><a href="https://blog.chaitin.cn/">长亭科技博客</a><span>长亭科技博客</span></li>
+        <li id="logo_006"><a href="http://blog.nsfocus.net/">绿盟科技博客</a><span>绿盟科技博客</span></li>
+        <li id="logo_007"><a href="https://security.tencent.com/index.php/blog">腾讯安全博客</a><span>腾讯安全博客</span></li>
+        <li class="four" id="logo_008"><a href="http://www.myh0st.cn/">信安之路</a><span>信安之路</span></li>
+        <li class="one" id="logo_009"><a href="http://www.pang0lin.com/" >穿山甲博客</a><span>穿山甲博客</span></li>
+        <li id="logo_010"><a href="https://hackfun.org/">41do10n博客</a><span>>41do10n博客</span></li>
+        <li id="logo_011"><a href="http://evilcos.me/">余弦博客</a><span>余弦博客/span></li>
+        <li class="four" id="logo_012"><a href="https://www.leavesongs.com/">离别歌</a><span>离别歌</span></li>
+        <li id="logo_013"><a href="http://yaseng.org/">Yaseng博客</a><span>Yaseng博客</span></li>
+        <li id="logo_014"><a href="https://bugs.leavesongs.com/">PHITHON的公开漏洞</a><span>PHITHON的公开漏洞</span></li>
+        <li id="logo_015"><a href="http://www.moonsec.com/">暗月博客</a><span>暗月博客</span></li>
+        <li class="four" id="logo_016"><a href="http://javaweb.org/">园长安全博客</a><span>园长安全博客</span></li>
+      </ul>
+    </dd>
+    <dd style="display:none;">
+    <!--常用工具-->
+      <ul>
+ 	<li class="one" id="logo_001"><a href="https://x.threatbook.cn/">微步在线</a><span>微步在线</span></li>
+        <li id="logo_002"><a href="https://www.tianyancha.com/">天眼查-企业查询</a><span>天眼查-企业查询</span></li>
+        <li id="logo_003"><a href="http://www.zhaohuini.com/">找回你</a><span>注册过哪些网站</span></li>
+        <li class="four" id="logo_004"><a href="https://wooyun.shuimugan.com/">乌云公开漏洞</a><span>乌云公开漏洞</a><span>SooPAT-专利搜索</span></li>
+        <li class="one" id="logo_005"><a href="https://ip.rtbasia.com/">RTBAsia ODX</a><span>RTBAsia ODX</span></li>
+        <li id="logo_006"><a href="https://www.opengps.cn/">openGPS.cn-IP定位</a><span>openGPS.cn-IP定位</span></li>
+        <li id="logo_007"><a href="https://haveibeenpwned.com/">数据泄露查询</a><span>数据泄露查询</span></li>
+        <li class="four" id="logo_008"><a href="https://myip.ms/">myip</a><span>myip</span></li>
+        <li class="one" id="logo_009"><a href="http://tools.mayter.cn/" >密码攻击器</a><span>密码攻击器</span></li>
+        <li id="logo_010"><a href="http://www.hao7188.com/">IP地址查询</a><span>IP地址查询</span></li>
+        <li id="logo_011"><a href="https://tool.lu/">程序员在线工具</a><span>程序员在线工具</span></li>
+        <li class="four" id="logo_012"><a href="http://www.54zz.com/">网站历史库</a><span>网站历史库</span></li>
+        <li id="logo_013"><a href="http://www.whomx.com/">虎妈查</a><span>域名邮箱服务商查询</span></li>
+        <li id="logo_014"><a href="https://intodns.com/">DNS检测报告</a><span>DNS检测报告</span></li>
+        <li id="logo_015"><a href="http://www.gpsspg.com/">GPSspg查询网</a><span>GPSspg查询网</span></li>
+        <li class="four" id="logo_016"><a href="https://www.ipip.net/">IPIP.NET-IP地址库</a><span>IPIP.NET-IP地址库</span></li>
+      </ul>
+    </dd>
+    <dd style="display:none;">
+    <!--外网业务-->
+      <ul>
+	<li class="one" id="logo_001"><a href="http://www.haaic.gov.cn/">外网网站群</a><span>外网网站群</span></li>
+        <li id="logo_002"><a href="http://gsxt.haaic.gov.cn/">企业信用信息公示系统</a><span>企业信用信息公示系统</span></li>
+        <li id="logo_003"><a href="http://qcdzh.haaic.gov.cn/">全程电子化系统</a><span>全程电子化系统</span></li>
+        <li class="four" id="logo_004"><a href="http://xtjg.haaic.gov.cn/">协调监管系统</a><span>协调监管系统</span></li>
+        <li class="one" id="logo_005"><a href="http://wj.haaic.gov.cn/">网络诚信交易网站</a><span>网络诚信交易网站</span></li>
+        <li id="logo_006"><a href="http://kxjy.haaic.gov.cn/">可信交易</a><span>可信交易</span></li>
+        <li id="logo_007"><a href="http://mail.haaic.gov.cn/">电子邮件系统</a><span>电子邮件系统</span></li>
+        <li class="four" id="logo_008"><a href="http://222.143.21.139:8866/">首重企业公示系统</a><span>首重企业公示系统</span></li>
+        <li class="one" id="logo_009"><a href="" >外网漏洞扫描</a><span>外网漏洞扫描</span></li>
+        <li id="logo_010"><a href="https://222.143.21.25:9943/">null</a><span>null</span></li>
+        <li id="logo_011"><a href="http://manage.zwfw.zyyun.com.cn/">null</a><span>null</span></li>
+        <li class="four" id="logo_012"><a href="https://10.186.40.2:9801/login.html">null</a><span>null</span></li>
+        <li class="one" id="logo_013"><a href="http://10.8.5.104/ossec/">null</a><span>null</span></li>
+        <li id="logo_014"><a href="http://">null</a><span>null</span></li>
+        <li id="logo_015"><a href="https://10.8.5.105:8834/">null</a><span>null</span></li>
+        <li class="four" id="logo_016"><a href="http://">null</a><span>null</span></li>
+      </ul>
+    </dd>
+     <dd style="display:none;">
+     <!--内网业务-->
+      <ul>
+ 	<li class="one" id="logo_001"><a href="http://10.8.1.13/">内网网站群</a><span>内网网站群</span></li>
+        <li id="logo_002"><a href="http://10.8.1.193/sofa">大数据分析系统</a><span>大数据分析系统</span></li>
+        <li id="logo_003"><a href="http://10.8.6.37:8080/callcenter/">12315系统</a><span>12315系统</span></li>
+        <li class="four" id="logo_004"><a href="http://10.8.1.44:8080/TopEAM/">电子档案管理</a><span>电子档案管理</span></li>
+        <li class="one" id="logo_005"><a href="http://10.8.1.130:9080/TopIcis/">综合业务系统</a><span>综合业务系统</span></li>
+        <li id="logo_006"><a href="http://10.8.1.5:9890/dove/">行政效能电子监察系统</a><span>行政效能电子监察系统</span></li>
+        <li id="logo_007"><a href="http://172.24.2.143:8080/">电子邮件系统后台</a><span>电子邮件系统后台</span></li>
+        <li class="four" id="logo_008"><a href="http://10.8.1.26:7001/sms/">短消息平台系统</a><span>短消息平台系统</span></li>
+        <li class="one" id="logo_009"><a href="http://10.8.1.163:9080/TopIcis/loginUI.do" >综合业务测试</a><span>综合业务测试</span></li>
+        <li id="logo_010"><a href="http://10.8.1.24:8080/admin/prelogin.action">可信交易内网</a><span>可信交易内网</span></li>
+        <li id="logo_011"><a href="http://10.8.1.123:8091/">年报统计</a><span>年报统计</span></li>
+        <li class="four" id="logo_012"><a href="http://10.8.1.13/topsites/index_jcms.jsp">内网网站群后台</a><span>内网网站群后台</span></li>
+        <li class="one" id="logo_013"><a href="http://172.24.2.6:2425/topsites">外网网站群后台</a><span>外网网站群后台</span></li>
+        <li id="logo_014"><a href="http://">null</a><span>null</span></li>
+        <li id="logo_015"><a href="https://10.8.5.105:8834/">null</a><span>null</span></li>
+        <li class="four" id="logo_016"><a href="http://">null</a><span>null</span></li>
+      </ul>
+    </dd>
+  </dl>
+  
+ 
+</div>
+<!--logo区结束--> 
+<!--左右箭头开始-->
+<div class="prev"><img src="images/arr_left.png" width="31" height="67"></div>
+<div class="next"><img src="images/arr_right.png" width="31" height="67"></div>
+<!--左右箭头结束-->
+<div style="text-align:center;padding:15px 0px;background:#222;">
+<a style="color:white;font-family:微软雅黑;">技术支持：金盾信安 电话：66779640</a>
+</div>
+</body>
+</html>

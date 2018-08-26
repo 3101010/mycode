@@ -1,6 +1,6 @@
 #encoding:utf-8
 """
-@author:Liod
+@author:Liod Chuanwei
 @file:main.py
 @time:18-1-19上午11:47
 """

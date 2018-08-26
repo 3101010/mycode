@@ -152,11 +152,11 @@ def check_net():
         #先断开连接
         log("INFO:尝试断开连接...");
         netsh_ret = os.system("netsh wlan disconnect")
-        netsh_ret1 = os.system('netsh interface set interface "以太网" disabled')
+        # netsh_ret1 = os.system('netsh interface set interface "以太网" disabled')
         wait(3)
         log("INFO:尝试重新连接...");
         netsh_ret = os.system("netsh wlan connect name=xxzx708")
-        netsh_ret1 = os.system('netsh interface set interface "以太网" enabled')
+        # netsh_ret1 = os.system('netsh interface set interface "以太网" enabled')
         #wait(2)
         log("INFO:NETSH_RET STATUS_CODE:%d" %netsh_ret)
         log("---------------------CHECK_NET_END(%d)---------------------\n" %check_net_count)
