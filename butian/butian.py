@@ -3,6 +3,9 @@ import requests
 import time
 from bs4 import BeautifulSoup
 import os
+import pymysql
+import sqlite3
+
 
 def spider():
     '''
@@ -18,8 +21,8 @@ def spider():
         'Accept-Encoding': 'gzip, deflate',
         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
         'X-Requested-With': 'XMLHttpRequest',
+        'Cookie':'__guid=132730903.4440770603871268400.1520390803017.5654; __huid=11CubMWdflqvoDYXEj8aSfRALh4waGg2TUdpM8EHYDXqY=; UM_distinctid=161fef3bf101cf-067004411e4e7a-1e5a2d42-100200-161fef3bf12126; Qs_lvt_168574=1526269048; Qs_pv_168574=4190023083885861000; _ga=GA1.2.382577052.1526614019; __gid=133660893.509053621.1520837988924.1535087918014.69; __hsid=cfc044660d41bca8; Q=u%3D360H996161374%26n%3D%26le%3DAQLmZwL2BGLmWGDjpKRhL29g%26m%3D%26qid%3D996161374%26im%3D1_t0130249639129f6be7%26src%3D360chrome%26t%3D1; T=s%3De8834ed1d029776112932035410d9685%26t%3D1533952248%26lm%3D%26lf%3D1%26sk%3D790348a59b880faa8b65defdbd1fe966%26mt%3D1533952248%26rc%3D%26v%3D2.0%26a%3D1; PHPSESSID=e4n8fis9k255o3a8o7d8rgc5o2; __DC_monitor_count=2; __DC_gid=133660893.509053621.1520837988924.1535251894827.479; __DC_sid=90162694.1582259957482741200.1535251894822.198; test_cookie_enable=null; __q__=1535251895346',
         'Referer': 'http://butian.360.cn/Reward/pub//Message/send',
-        "Cookie":"__huid=11iG2Lxm6+ZYcs3gZYffTpfY3hSL9DFgEOVB2IVGdrCSY=; __guid=132730903.3081300459025730600.1511068627877.4731; __gid=156009789.597625749.1511068940809.1511069060148.3; __hsid=607590b042738ffc; Q=u%3D%25PQ%25S8%25O6%25R1%25PP%25RP%25PS%25P2%26n%3D%26le%3Drv53o2ScLzIcnzyhMl53WGDjZGLmYzAioD%3D%3D%26m%3D%26qid%3D108357034%26im%3D1_t0110241e46b6243004%26src%3D360chrome%26t%3D1; T=s%3Def372f4f334b11bd509f9be7171ef9db%26t%3D1511071681%26lm%3D%26lf%3D1%26sk%3Ddc28e065bfccfa0ef16cd0a4c95ef983%26mt%3D1511071681%26rc%3D%26v%3D2.0%26a%3D1; PHPSESSID=qucsabthphh4g2mt5am2020gi1; __q__=1511686950193; __DC_monitor_count=2; __DC_gid=156009789.597625749.1511068940809.1511686949655.5; __DC_sid=90162694.2805026889702643000.1511686924976.1587",
         'Connection': 'keep-alive'
     }
     for i in range(1,int(allPages)):
@@ -28,8 +31,9 @@ def spider():
             'p': i,
             'token': ''
         }
-        time.sleep(3)
-        res = requests.post('http://butian.360.cn/Reward/pub/Message/send', data=data,headers=headers,timeout=(4,20))
+        # time.sleep(3)
+        session = requests.session()
+        res = session.post('http://butian.360.cn/Reward/pub/Message/send', data=data,headers=headers,timeout=(4,20))
         allResult = {}
         allResult = json.loads(res.text)
         currentPage = str(allResult['data']['current'])
@@ -42,6 +46,7 @@ def spider():
             base='http://butian.360.cn/Loo/submit?cid='
             with open('id.txt','a') as f:
                 f.write(base+allResult['data']['list'][int(num)]['company_id']+'\n')
+
 def Url():
     '''
     遍历所有的ID
@@ -56,7 +61,7 @@ def Url():
         'Accept-Language':'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
         'Accept-Encoding': 'gzip, deflate',
         'Referer':'http://butian.360.cn/Reward/pub',
-        'Cookie':'test_cookie_enable=null; __guid=132730903.4440770603871268400.1520390803017.5654; __huid=11CubMWdflqvoDYXEj8aSfRALh4waGg2TUdpM8EHYDXqY=; UM_distinctid=161fef3bf101cf-067004411e4e7a-1e5a2d42-100200-161fef3bf12126; Qs_lvt_168574=1526269048; Qs_pv_168574=4190023083885861000; _ga=GA1.2.382577052.1526614019; __gid=133660893.509053621.1520837988924.1535087918014.69; __hsid=ed933f2c78b33b0d; Q=u%3D360H996161374%26n%3D%26le%3DAQLmZwL2BGLmWGDjpKRhL29g%26m%3D%26qid%3D996161374%26im%3D1_t0130249639129f6be7%26src%3D360chrome%26t%3D1; T=s%3De8834ed1d029776112932035410d9685%26t%3D1533952248%26lm%3D%26lf%3D1%26sk%3D790348a59b880faa8b65defdbd1fe966%26mt%3D1533952248%26rc%3D%26v%3D2.0%26a%3D1; PHPSESSID=hkrumlomm83nnmik63mfeutss1; __DC_monitor_count=10; __q__=1535249653853; __DC_gid=133660893.509053621.1520837988924.1535249744041.477; __DC_sid=138613664.2000307614041962000.1535248675126.5059',
+        'Cookie':'__guid=132730903.4440770603871268400.1520390803017.5654; __huid=11CubMWdflqvoDYXEj8aSfRALh4waGg2TUdpM8EHYDXqY=; UM_distinctid=161fef3bf101cf-067004411e4e7a-1e5a2d42-100200-161fef3bf12126; Qs_lvt_168574=1526269048; Qs_pv_168574=4190023083885861000; _ga=GA1.2.382577052.1526614019; __gid=133660893.509053621.1520837988924.1535087918014.69; __hsid=cfc044660d41bca8; Q=u%3D360H996161374%26n%3D%26le%3DAQLmZwL2BGLmWGDjpKRhL29g%26m%3D%26qid%3D996161374%26im%3D1_t0130249639129f6be7%26src%3D360chrome%26t%3D1; T=s%3De8834ed1d029776112932035410d9685%26t%3D1533952248%26lm%3D%26lf%3D1%26sk%3D790348a59b880faa8b65defdbd1fe966%26mt%3D1533952248%26rc%3D%26v%3D2.0%26a%3D1; PHPSESSID=e4n8fis9k255o3a8o7d8rgc5o2; __DC_monitor_count=2; __DC_gid=133660893.509053621.1520837988924.1535251894827.479; __DC_sid=90162694.1582259957482741200.1535251894822.198; test_cookie_enable=null; __q__=1535251895346',
         'Connection':'keep-alive',
         'Upgrade-Insecure-Requests': '1',
         'Cache-Control':'max-age=0'
@@ -65,7 +70,7 @@ def Url():
         for target in f.readlines():
             target=target.strip()
             idnum=target.split("=")[1]
-            getUrl=requests.get(target,headers=headers,timeout=(4,20))
+            getUrl=session.get(target,headers=headers,timeout=(4,20))
             print ("HTTP/1.1 %s" % getUrl.status_code)
             result=getUrl.text
             info=BeautifulSoup(result,'html.parser')
@@ -84,10 +89,11 @@ if __name__=='__main__':
             'p': '1',
             'token': ''
         }
-    res = requests.post('http://butian.360.cn/Reward/pub/Message/send', data=data)
+    session = requests.session()
+    res = session.post('http://butian.360.cn/Reward/pub/Message/send', data=data)
     allResult = {}
     allResult = json.loads(res.text)
     allPages = str(allResult['data']['count'])
     print('共' + allPages + '页')
-    #spider()
-    Url()
+    spider()
+    #Url()
